@@ -6,66 +6,120 @@
     <title>Your Name - Resume</title>
     <!-- Bootstrap CSS CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts for modern font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         header {
-            background-color: #333;
+            background-color: #3f51b5;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 10px 0 0;
         }
 
         .container {
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            background-color: #3f51b5;
+            color: white;
+            padding: 15px;
+            margin: 0;
+            font-size: 22px;
+            border-radius: 5px 5px 0 0;
         }
 
         .content {
             background-color: white;
-            padding: 15px;
+            padding: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
         }
 
         .skills ul {
             display: flex;
             flex-wrap: wrap;
+            gap: 15px;
         }
 
         .skills li {
-            margin-right: 20px;
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
         }
 
         .date {
             color: #888;
+            font-size: 14px;
         }
 
-        /* Section Headers */
-        .section h2 {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            margin: 0;
-        }
+        /* Responsive Layout for small screens */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
 
-        /* Contact and Education Styling */
-        .contact-info a {
-            color: #333;
-            text-decoration: none;
-        }
+            header p {
+                font-size: 16px;
+            }
 
-        .contact-info a:hover {
-            text-decoration: underline;
+            .section h2 {
+                font-size: 20px;
+            }
+
+            .skills ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .skills li {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -77,15 +131,16 @@
     </header>
 
     <div class="container">
+        <!-- Contact Information and Education Section in a row -->
         <div class="row">
             <!-- Contact Information Section (col-md-4) -->
             <section class="col-md-4 contact-info section">
                 <h2>Contact Information</h2>
                 <div class="content">
-                    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-                    <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-                    <p>LinkedIn: <a href="your-linkedin-url" target="_blank">your-linkedin-url</a></p>
-                    <p>GitHub: <a href="your-github-url" target="_blank">your-github-url</a></p>
+                    <p>Email: <a href="mailto:youremail@example.com" style="color: #3f51b5;">youremail@example.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890" style="color: #3f51b5;">+123 456 7890</a></p>
+                    <p>LinkedIn: <a href="your-linkedin-url" target="_blank" style="color: #3f51b5;">your-linkedin-url</a></p>
+                    <p>GitHub: <a href="your-github-url" target="_blank" style="color: #3f51b5;">your-github-url</a></p>
                 </div>
             </section>
 
