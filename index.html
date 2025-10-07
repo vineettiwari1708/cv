@@ -10,8 +10,6 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
@@ -52,7 +50,7 @@
             color: #888;
         }
 
-        /* Styling for Sections */
+        /* Section Headers */
         .section h2 {
             background-color: #333;
             color: white;
@@ -60,6 +58,7 @@
             margin: 0;
         }
 
+        /* Contact and Education Styling */
         .contact-info a {
             color: #333;
             text-decoration: none;
@@ -71,6 +70,7 @@
     </style>
 </head>
 <body>
+
     <header>
         <h1>Your Name</h1>
         <p>Your Profession (e.g., Web Developer)</p>
@@ -78,7 +78,7 @@
 
     <div class="container">
         <div class="row">
-            <!-- Contact Information Section (col-4) -->
+            <!-- Contact Information Section (col-md-4) -->
             <section class="col-md-4 contact-info section">
                 <h2>Contact Information</h2>
                 <div class="content">
@@ -89,7 +89,7 @@
                 </div>
             </section>
 
-            <!-- Education Section (col-8) -->
+            <!-- Education Section (col-md-8) -->
             <section class="col-md-8 education section">
                 <h2>Education</h2>
                 <div class="content">
@@ -104,8 +104,9 @@
             </section>
         </div>
 
+        <!-- Professional Experience and Skills Sections in a row -->
         <div class="row">
-            <!-- Professional Information Section (col-6) -->
+            <!-- Professional Experience Section (col-md-6) -->
             <section class="col-md-6 professional-info section">
                 <h2>Professional Experience</h2>
                 <div class="content">
@@ -124,7 +125,7 @@
                 </div>
             </section>
 
-            <!-- Skills Section (col-6) -->
+            <!-- Skills Section (col-md-6) -->
             <section class="col-md-6 skills section">
                 <h2>Skills</h2>
                 <div class="content">
@@ -140,9 +141,9 @@
             </section>
         </div>
 
+        <!-- Training Section -->
         <div class="row">
-            <!-- Training Section (col-6) -->
-            <section class="col-md-6 training section">
+            <section class="col-12 training section">
                 <h2>Training</h2>
                 <div class="content">
                     <ul>
@@ -166,5 +167,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
