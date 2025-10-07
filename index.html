@@ -12,70 +12,124 @@
             background-color: #f4f4f4;
             color: #333;
         }
+
         header {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px;
-            margin-bottom: 20px; /* Adds space below header */
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-        .section {
             margin-bottom: 20px;
         }
-        .section h2 {
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Personal Information Section */
+        .personal-info {
+            flex: 1 1 100%; /* Take up full width on small screens */
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .personal-info h2 {
             background-color: #333;
             color: white;
             padding: 10px;
             margin: 0;
         }
+
+        .personal-info p {
+            margin: 10px 0;
+        }
+
+        .personal-info a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .personal-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Professional Section */
+        .professional-info {
+            flex: 1 1 100%;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .professional-info h2 {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .professional-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .professional-info ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .personal-info {
+                flex: 1 1 45%;
+            }
+
+            .professional-info {
+                flex: 1 1 45%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .personal-info, .professional-info {
+                padding: 30px;
+            }
+        }
+
+        /* Styling for Sections */
+        .section {
+            margin-bottom: 20px;
+        }
+
         .content {
             background-color: white;
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
+
         .skills ul {
             display: flex;
             flex-wrap: wrap;
         }
+
         .skills li {
             margin-right: 20px;
         }
+
         .date {
             color: #888;
-        }
-
-        /* Contact Information section */
-        .contact-info {
-            margin-top: 20px;
-            padding: 0;  /* Adds space inside the contact section */
-            background-color: #ffffff;
-            border: 1px solid #ddd; /* Border for visual separation */
-            border-radius: 5px;  /* Rounded corners */
-        }
-        .contact-info h2 {
-            margin-top: 0; /* Removes default top margin */
-        }
-        .contact-info p {
-            margin: 10px 0;  /* Adds space between contact details */
-        }
-        .contact-info a {
-            color: #333;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;  /* Underline links on hover */
         }
     </style>
 </head>
@@ -86,8 +140,8 @@
     </header>
 
     <div class="container">
-        <!-- Contact Information -->
-        <section class="contact-info section">
+        <!-- Personal Information Section -->
+        <section class="personal-info">
             <h2>Contact Information</h2>
             <div class="content">
                 <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
@@ -97,30 +151,15 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills section">
-            <h2>Skills</h2>
-            <div class="content">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>PHP</li>
-                    <li>WordPress</li>
-                    <li>MERN Stack</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="experience section">
+        <!-- Professional Information Section -->
+        <section class="professional-info">
             <h2>Professional Experience</h2>
             <div class="content">
                 <ul>
                     <li>
                         <strong>Web Developer</strong> – Company Name
                         <div class="date">March 2021 - Present</div>
-                        <p>Brief description of your role and responsibilities. Worked on front-end and back-end development using HTML, CSS, JavaScript, PHP, and WordPress.</p>
+                        <p>Worked on front-end and back-end development using HTML, CSS, JavaScript, PHP, and WordPress.</p>
                     </li>
                     <li>
                         <strong>Junior Web Developer</strong> – Company Name
@@ -129,10 +168,21 @@
                     </li>
                 </ul>
             </div>
-        </section>
 
-        <!-- Education Section -->
-        <section class="education section">
+            <!-- Skills Section -->
+            <h2>Skills</h2>
+            <div class="content">
+                <ul class="skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>WordPress</li>
+                    <li>MERN Stack</li>
+                </ul>
+            </div>
+
+            <!-- Education Section -->
             <h2>Education</h2>
             <div class="content">
                 <ul>
@@ -143,10 +193,8 @@
                     </li>
                 </ul>
             </div>
-        </section>
 
-        <!-- Training Section -->
-        <section class="training section">
+            <!-- Training Section -->
             <h2>Training</h2>
             <div class="content">
                 <ul>
